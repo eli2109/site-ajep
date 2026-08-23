@@ -9,39 +9,28 @@ cd "/Users/tanguy/Documents/site AJEP"
 python3 -m http.server 8080
 ```
 
-Puis va sur http://127.0.0.1:8080
+## Formulaire
 
-## À brancher
+Les boutons « Rejoindre le groupe WhatsApp » **n’ouvrent pas WhatsApp**. Ils affichent le formulaire. Les demandes partent vers l’adresse définie dans `js/config.js` (`email`) via FormSubmit.
 
-Dans `js/config.js` :
-
-- `whatsapp` : numéro international sans `+` (ex. `33612345678`)
-- `email` : adresse de contact
-- `instagram` : URL du compte, si vous en avez un
+La première réception peut demander une confirmation de l’adresse e-mail.
 
 ## Photos à remplacer
 
-Chaque visuel porte un badge **Photo à remplacer — …**. Les fichiers sont dans `images/` :
+Chaque visuel porte un badge **Photo à remplacer**. Fichiers dans `images/` :
 
 | Fichier | Sujet |
 |---|---|
-| `hero.jpg` | Jeunes réunis, étudiant / discutant |
-| `axe-etudier.jpg` | Espace de travail, révisions |
-| `axe-apprendre.jpg` | Cours, livres, discussion |
-| `axe-fetes.jpg` | Table de fête, convivialité |
-| `axe-rencontrer.jpg` | Jeunes autour d’une table |
-| `axe-decouvrir.jpg` | Université d’été, projets |
-| `rdv-leil-shishi.jpg` | Soirée d’étude + repas |
-| `rdv-samedi.jpg` | Étude du Tanakh |
-| `rdv-dimanche.jpg` | Cours de Talmud |
-| `activite-*.jpg` | Les 5 activités |
-| `mission.jpg` | Échange autour d’un texte |
-
-Garde les mêmes noms de fichiers, ou mets à jour les `src` dans `index.html`.
-
-## Intervenants
-
-Les 4 cartes sont des placeholders (nom, photo, bio). Remplace-les dans la section `#intervenants` de `index.html`.
+| `hero.jpg` | Jeunes réunis |
+| `axe-etudier.jpg` | Local / espace de travail |
+| `activite-etudiants.jpg` | Espace étudiants |
+| `axe-apprendre.jpg` | Cours, livres |
+| `axe-fetes.jpg` | Hanouka, Pourim, fêtes |
+| `axe-rencontrer.jpg` | Repas, soirées |
+| `axe-decouvrir.jpg` | Université d’été |
+| `rdv-leil-shishi.jpg` | Jeudi soir |
+| `rdv-samedi.jpg` | Samedi matin |
+| `rdv-dimanche.jpg` | Dimanche matin |
 
 ## Mentions légales
 

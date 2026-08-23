@@ -1,8 +1,6 @@
-/* Tout ce qu’il reste à brancher concrètement.
-   Remplace les chaînes vides dès que tu as les infos. */
+/* À brancher concrètement. */
 window.AJEP_CONFIG = {
-  whatsapp: "", // ex. "33612345678" sans + ni espaces
-  email: "contact@ajep.fr",
+  email: "contact@ajep.fr", // destination du formulaire (FormSubmit)
   instagram: "", // ex. "https://instagram.com/ajep"
   ville: "Puteaux — Hauts-de-Seine",
 };

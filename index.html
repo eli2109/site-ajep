@@ -37,13 +37,11 @@
           </span>
         </a>
         <nav class="nav" aria-label="Navigation principale">
-          <a href="#lieu">Le lieu</a>
-          <a href="#etude">Étude</a>
+          <a href="#lieu">L’AJEP</a>
           <a href="#activites">Activités</a>
-          <a href="#intervenants">Intervenants</a>
-          <a href="#rejoindre">Rejoindre</a>
+          <a href="#cours">Nos cours</a>
         </nav>
-        <a class="btn btn-primary nav-cta" href="#rejoindre">Rejoindre l’AJEP</a>
+        <a class="btn btn-primary nav-cta js-join" href="#rejoindre">Nous rejoindre</a>
         <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -51,13 +49,11 @@
     </header>
 
     <nav class="nav-panel" aria-label="Menu mobile">
-      <a href="#lieu">Le lieu</a>
-      <a href="#etude">Les rendez-vous d’étude</a>
+      <a href="#lieu">L’AJEP</a>
       <a href="#activites">Activités</a>
-      <a href="#mission">La mission</a>
-      <a href="#intervenants">Intervenants</a>
-      <a href="#rejoindre">Rejoindre l’AJEP</a>
-      <a class="btn btn-primary" href="#rejoindre" style="margin-top: 1rem">Rejoindre l’AJEP</a>
+      <a href="#cours">Nos cours</a>
+      <a href="#rejoindre" class="js-join">Nous rejoindre</a>
+      <a class="btn btn-primary js-join" href="#rejoindre" style="margin-top: 1rem">Nous rejoindre</a>
     </nav>
 
     <main id="contenu">
@@ -97,7 +93,7 @@
         </div>
       </section>
 
-      <section class="axes" id="lieu">
+      <section class="lieu" id="lieu">
         <div class="wrap">
           <div class="section-head reveal">
             <p class="kicker">L’AJEP, un lieu pour les jeunes</p>
@@ -109,27 +105,41 @@
             </p>
           </div>
 
+          <article class="lieu-highlight reveal">
+            <figure class="photo-slot">
+              <img src="images/axe-etudier.jpg" alt="" />
+              <figcaption class="photo-slot__badge">Photo à remplacer — le local, espace étudiants</figcaption>
+            </figure>
+            <div class="lieu-highlight__copy">
+              <p class="axe-num">Espace étudiants</p>
+              <h3>Un lieu où venir, aussi au quotidien</h3>
+              <p>
+                Au-delà des cours et des événements, l’AJEP est aussi un lieu où venir travailler, se retrouver et
+                échanger au quotidien.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="axes" id="activites">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="kicker">Cinq propositions</p>
+            <h2>Les 5 grands axes d’activités</h2>
+            <p class="lead">Ce qu’on peut faire à l’AJEP, en quelques secondes.</p>
+          </div>
+
           <div class="axes-grid">
-            <article class="axe reveal">
+            <article class="axe axe--featured reveal">
               <figure class="photo-slot">
-                <img src="images/axe-etudier.jpg" alt="" />
-                <figcaption class="photo-slot__badge">Photo à remplacer — espace de travail, étudiants en révision</figcaption>
+                <img src="images/activite-etudiants.jpg" alt="" />
+                <figcaption class="photo-slot__badge">Photo à remplacer — jeunes au travail dans le local</figcaption>
               </figure>
               <div class="axe-body">
-                <p class="axe-num">01 — Un lieu de référence</p>
+                <p class="axe-num">01 — Espace étudiants</p>
                 <h3>Étudier &amp; travailler</h3>
-                <p>
-                  Un lieu calme et accueillant où les lycéens et étudiants peuvent venir travailler, réviser et
-                  étudier, seuls ou avec d’autres. Au-delà des cours et des événements, l’AJEP peut devenir un vrai
-                  point d’ancrage au quotidien.
-                </p>
-                <div class="chips">
-                  <span class="chip">Espace de travail</span>
-                  <span class="chip">Révisions</span>
-                  <span class="chip">Temps d’étude</span>
-                  <span class="chip">Accompagnement</span>
-                  <span class="chip">Universités d’été</span>
-                </div>
+                <p>Un espace calme et accueillant pour travailler, réviser et se retrouver entre étudiants.</p>
               </div>
             </article>
 
@@ -139,61 +149,36 @@
                 <figcaption class="photo-slot__badge">Photo à remplacer — cours, livres, discussion</figcaption>
               </figure>
               <div class="axe-body">
-                <p class="axe-num">02 — Esprit critique</p>
+                <p class="axe-num">02</p>
                 <h3>Apprendre &amp; réfléchir</h3>
                 <p>
-                  Des cours, conférences et cycles d’étude pour découvrir et approfondir la culture, l’histoire, les
-                  textes et la pensée juive — et les faire dialoguer avec les grandes questions d’aujourd’hui.
+                  Des cours et rencontres pour approfondir les textes, la culture juive et réfléchir aux grandes
+                  questions contemporaines.
                 </p>
-                <div class="chips">
-                  <span class="chip">IA</span>
-                  <span class="chip">Réseaux sociaux</span>
-                  <span class="chip">Sciences</span>
-                  <span class="chip">Éthique</span>
-                  <span class="chip">Israël</span>
-                </div>
               </div>
             </article>
 
             <article class="axe reveal">
               <figure class="photo-slot">
                 <img src="images/axe-fetes.jpg" alt="" />
-                <figcaption class="photo-slot__badge">Photo à remplacer — table de fête, repas, convivialité</figcaption>
+                <figcaption class="photo-slot__badge">Photo à remplacer — Hanouka, Pourim, fêtes du calendrier</figcaption>
               </figure>
               <div class="axe-body">
-                <p class="axe-num">03 — Une culture vivante</p>
-                <h3>Vivre les fêtes &amp; la culture juives</h3>
-                <p>
-                  Vivre ensemble les temps forts du calendrier et de la culture juive dans une atmosphère chaleureuse
-                  et conviviale. Une culture partagée, accessible, incarnée.
-                </p>
-                <div class="chips">
-                  <span class="chip">Fêtes juives</span>
-                  <span class="chip">Repas</span>
-                  <span class="chip">Soirées</span>
-                  <span class="chip">Culture</span>
-                </div>
+                <p class="axe-num">03</p>
+                <h3>Fêtes &amp; culture juives</h3>
+                <p>Vivre ensemble les fêtes et les temps forts de la culture juive dans une atmosphère conviviale.</p>
               </div>
             </article>
 
             <article class="axe reveal">
               <figure class="photo-slot">
                 <img src="images/axe-rencontrer.jpg" alt="" />
-                <figcaption class="photo-slot__badge">Photo à remplacer — jeunes autour d’une table, échanges</figcaption>
+                <figcaption class="photo-slot__badge">Photo à remplacer — repas, soirée, jeunes autour d’une table</figcaption>
               </figure>
               <div class="axe-body">
-                <p class="axe-num">04 — La dimension humaine</p>
+                <p class="axe-num">04</p>
                 <h3>Se rencontrer &amp; partager</h3>
-                <p>
-                  Créer des occasions de se rencontrer, d’échanger et de construire des liens entre les jeunes de
-                  Puteaux et des Hauts-de-Seine. Y compris les moments informels, au local.
-                </p>
-                <div class="chips">
-                  <span class="chip">Repas entre jeunes</span>
-                  <span class="chip">Soirées</span>
-                  <span class="chip">Discussions</span>
-                  <span class="chip">Moments informels</span>
-                </div>
+                <p>Des repas, soirées et moments de convivialité pour rencontrer d’autres jeunes et créer des liens.</p>
               </div>
             </article>
 
@@ -203,31 +188,24 @@
                 <figcaption class="photo-slot__badge">Photo à remplacer — université d’été, rencontres, projets</figcaption>
               </figure>
               <div class="axe-body">
-                <p class="axe-num">05 — D’autres perspectives</p>
+                <p class="axe-num">05</p>
                 <h3>Découvrir &amp; s’ouvrir</h3>
                 <p>
-                  Des universités d’été, des rencontres avec des intervenants et des projets ponctuels pour approfondir
-                  ses connaissances, échanger et découvrir de nouvelles perspectives.
+                  Universités d’été, rencontres avec des intervenants et projets pour approfondir ses connaissances et
+                  découvrir de nouvelles perspectives.
                 </p>
-                <div class="chips">
-                  <span class="chip">Universités d’été</span>
-                  <span class="chip">Intervenants</span>
-                  <span class="chip">Projets</span>
-                </div>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="rdv" id="etude">
+      <section class="rdv" id="cours">
         <div class="wrap">
           <div class="section-head reveal">
             <p class="kicker">Le fil de la semaine</p>
-            <h2>Nos trois rendez-vous d’étude</h2>
-            <p class="lead">
-              Trois temps réguliers pour étudier, débattre et relier la tradition aux questions du monde contemporain.
-            </p>
+            <h2>3 rendez-vous, 3 approches</h2>
+            <p class="lead">Trois temps réguliers, clairement distincts — pour étudier autrement chaque semaine.</p>
           </div>
 
           <div class="rdv-list">
@@ -237,20 +215,18 @@
                 <figcaption class="photo-slot__badge">Photo à remplacer — soirée d’étude autour d’un repas</figcaption>
               </figure>
               <div class="rdv-body">
-                <p class="rdv-when">Jeudi soir</p>
-                <h3>Leil Shishi</h3>
-                <p class="rdv-sub">Étudier la tradition pour penser le monde contemporain</p>
+                <p class="rdv-when">Leil Shishi · Jeudi soir</p>
+                <h3>Penser le monde contemporain</h3>
                 <p>
-                  Une soirée hebdomadaire autour d’un repas, consacrée à l’étude et à la réflexion sur les grandes
-                  questions de notre époque à travers les textes et la pensée juive. Intelligence artificielle, réseaux
-                  sociaux, politique, économie, travail, société, antisémitisme, Israël, éthique — les séances
-                  s’appuient sur différentes sources de la tradition et sur les grands penseurs et commentateurs.
+                  Une soirée autour d’un repas pour confronter les textes et la pensée juive aux grandes questions de
+                  notre époque.
                 </p>
                 <div class="chips">
-                  <span class="chip">Jeudi soir</span>
-                  <span class="chip">Étude</span>
-                  <span class="chip">Réflexion</span>
-                  <span class="chip">Repas</span>
+                  <span class="chip">IA</span>
+                  <span class="chip">Société</span>
+                  <span class="chip">Éthique</span>
+                  <span class="chip">Économie</span>
+                  <span class="chip">Israël</span>
                 </div>
               </div>
             </article>
@@ -262,19 +238,16 @@
               </figure>
               <div class="rdv-body">
                 <p class="rdv-when">Samedi matin</p>
-                <h3>Samedi matin</h3>
-                <p class="rdv-sub">Histoire, pouvoir et société à travers le Tanakh</p>
+                <h3>Histoire &amp; société</h3>
                 <p>
-                  Un cycle consacré à l’étude du Na’h, notamment les livres de Yéochoua, Shoftim et Melakhim. À travers
-                  les textes et leurs commentateurs, on aborde gouvernance, pouvoir, juges, rois et prophètes, guerres
-                  et paix, construction d’une société et exil. Une place particulière est accordée à l’étude du Malbim,
-                  grand commentateur du XIXe siècle.
+                  Étudier le Tanakh pour explorer l’histoire juive et les questions de pouvoir, de société et de
+                  transmission.
                 </p>
                 <div class="chips">
-                  <span class="chip">Samedi matin</span>
-                  <span class="chip">Tanakh</span>
-                  <span class="chip">Histoire</span>
-                  <span class="chip">Société</span>
+                  <span class="chip">Yéochoua</span>
+                  <span class="chip">Shoftim</span>
+                  <span class="chip">Melakhim</span>
+                  <span class="chip">Malbim</span>
                 </div>
               </div>
             </article>
@@ -286,19 +259,17 @@
               </figure>
               <div class="rdv-body">
                 <p class="rdv-when">Dimanche matin</p>
-                <h3>Dimanche matin</h3>
-                <p class="rdv-sub">Identité juive et confrontation des cultures</p>
+                <h3>Talmud &amp; identité</h3>
                 <p>
-                  Un cycle d’étude autour du traité talmudique Avoda Zara et de ses grands commentateurs : Rachi,
-                  Tossafot, Maïmonide, Maharal, entre autres. Le cours interroge les rapports entre identité juive,
-                  environnement culturel, influences extérieures et transmission — comment la tradition a pensé, au fil
-                  des siècles, la rencontre avec les sociétés environnantes.
+                  À travers l’étude du traité Avoda Zara, réfléchir aux rapports entre identité juive, culture et
+                  société.
                 </p>
                 <div class="chips">
-                  <span class="chip">Dimanche matin</span>
                   <span class="chip">Talmud</span>
-                  <span class="chip">Identité</span>
-                  <span class="chip">Transmission</span>
+                  <span class="chip">Rachi</span>
+                  <span class="chip">Tossafot</span>
+                  <span class="chip">Maïmonide</span>
+                  <span class="chip">Maharal</span>
                 </div>
               </div>
             </article>
@@ -306,141 +277,15 @@
         </div>
       </section>
 
-      <section class="activites" id="activites">
-        <div class="wrap">
-          <div class="section-head reveal">
-            <p class="kicker">Concrètement</p>
-            <h2>Nos activités</h2>
-            <p class="lead">Ce qui se passe à l’AJEP, en quelques secondes.</p>
-          </div>
-          <div class="act-grid">
-            <article class="act reveal">
-              <img src="images/activite-etudiants.jpg" alt="" />
-              <span class="photo-slot__badge">Photo à remplacer — jeunes au travail dans le local</span>
-              <div class="act-body">
-                <h3>Espace étudiants</h3>
-                <p>Un lieu pour travailler, réviser et se retrouver. Seul ou en groupe, dans de bonnes conditions.</p>
-              </div>
-            </article>
-            <article class="act reveal">
-              <img src="images/activite-cours.jpg" alt="" />
-              <span class="photo-slot__badge">Photo à remplacer — cours ou conférence</span>
-              <div class="act-body">
-                <h3>Cours &amp; conférences</h3>
-                <p>Apprendre, comprendre et débattre. Des enseignements réguliers et des regards croisés.</p>
-              </div>
-            </article>
-            <article class="act reveal">
-              <img src="images/activite-repas.jpg" alt="" />
-              <span class="photo-slot__badge">Photo à remplacer — repas, soirée, convivialité</span>
-              <div class="act-body">
-                <h3>Repas &amp; soirées</h3>
-                <p>Se retrouver autrement. Des moments pour se rencontrer et échanger.</p>
-              </div>
-            </article>
-            <article class="act reveal">
-              <img src="images/activite-fetes.jpg" alt="" />
-              <span class="photo-slot__badge">Photo à remplacer — fête juive vécue ensemble</span>
-              <div class="act-body">
-                <h3>Fêtes juives</h3>
-                <p>Vivre ensemble les temps forts du calendrier juif.</p>
-              </div>
-            </article>
-            <article class="act reveal">
-              <img src="images/activite-universites.jpg" alt="" />
-              <span class="photo-slot__badge">Photo à remplacer — université d’été, étude et rencontres</span>
-              <div class="act-body">
-                <h3>Universités d’été</h3>
-                <p>Étudier autrement. Approfondir une thématique, dans une atmosphère conviviale.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="mission" id="mission">
-        <div class="wrap">
-          <div class="mission-grid reveal">
-            <figure class="photo-slot">
-              <img src="images/mission.jpg" alt="" />
-              <figcaption class="photo-slot__badge">Photo à remplacer — échange autour d’un texte, jeunes et intervenant</figcaption>
-            </figure>
-            <div class="mission-copy">
-              <p class="kicker">Transmettre et comprendre</p>
-              <h2>Comprendre d’où l’on vient pour mieux comprendre le monde</h2>
-              <p>
-                L’AJEP souhaite transmettre aux jeunes les connaissances et les repères nécessaires pour construire une
-                identité juive éclairée, assumée et ouverte sur le monde.
-              </p>
-              <p>
-                À travers l’étude, les rencontres et les activités culturelles, l’association crée un espace où
-                tradition et monde contemporain peuvent dialoguer.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="intervenants" id="intervenants">
-        <div class="wrap">
-          <div class="section-head reveal">
-            <p class="kicker">Regards croisés</p>
-            <h2>Des intervenants aux parcours multiples</h2>
-            <p class="lead">
-              L’AJEP rassemble des enseignants et intervenants issus d’univers différents afin de croiser les regards
-              et les expériences.
-            </p>
-          </div>
-          <div class="int-grid">
-            <article class="int reveal">
-              <div class="avatar">Photo à venir</div>
-              <div>
-                <h3>Nom à venir</h3>
-                <p class="role">Textes et pensée juive</p>
-                <p>Enseignement des textes, de la tradition et de la pensée juive.</p>
-              </div>
-            </article>
-            <article class="int reveal">
-              <div class="avatar">Photo à venir</div>
-              <div>
-                <h3>Nom à venir</h3>
-                <p class="role">Université et recherche</p>
-                <p>Un regard académique pour relier les sources aux questions d’aujourd’hui.</p>
-              </div>
-            </article>
-            <article class="int reveal">
-              <div class="avatar">Photo à venir</div>
-              <div>
-                <h3>Nom à venir</h3>
-                <p class="role">Sciences et technologie</p>
-                <p>Sciences, technique et société — pour penser le monde qui se construit.</p>
-              </div>
-            </article>
-            <article class="int reveal">
-              <div class="avatar">Photo à venir</div>
-              <div>
-                <h3>Nom à venir</h3>
-                <p class="role">Monde professionnel</p>
-                <p>Entrepreneuriat et expériences de terrain, au contact de la vie réelle.</p>
-              </div>
-            </article>
-          </div>
-          <p class="int-note lead reveal">
-            Cette diversité permet de faire dialoguer les textes et la tradition juive avec les grandes questions
-            intellectuelles, scientifiques et sociales de notre époque.
-          </p>
-        </div>
-      </section>
-
       <section class="join" id="rejoindre">
         <div class="wrap">
-          <div class="join-card reveal">
-            <div>
+          <div class="join-card reveal" id="join-card">
+            <div class="join-intro">
               <p class="kicker" style="color: var(--gold-bright)">On t’attend</p>
-              <h2>Envie de nous rejoindre&nbsp;?</h2>
+              <h2>Rejoins la communauté AJEP</h2>
               <p class="lead">
-                Que ce soit pour travailler, participer à un cours, venir à une soirée ou simplement rencontrer
-                d’autres jeunes, les portes de l’AJEP sont ouvertes.
+                Présente-toi en quelques mots et indique-nous ce qui t’intéresse à l’AJEP. Nous te recontacterons pour
+                t’orienter vers le groupe WhatsApp le plus adapté.
               </p>
               <p class="place">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -455,9 +300,56 @@
               </p>
             </div>
             <div class="join-actions">
-              <a class="btn btn-wa js-whatsapp" href="#rejoindre">Rejoindre le groupe WhatsApp</a>
-              <button class="btn btn-ghost js-contact" type="button">Nous contacter</button>
+              <a class="btn btn-wa js-join" href="#rejoindre">Rejoindre le groupe WhatsApp</a>
             </div>
+
+            <div class="success-msg" id="form-success" hidden>
+              <p class="success-msg__title">Merci !</p>
+              <p>Nous avons bien reçu ta demande et nous te recontacterons rapidement.</p>
+            </div>
+
+            <form class="join-form" id="contact-form" hidden>
+              <label class="field">
+                <span>Prénom et nom</span>
+                <input name="nom" type="text" required autocomplete="name" />
+              </label>
+              <div class="field-row">
+                <label class="field">
+                  <span>Âge</span>
+                  <input name="age" type="number" inputmode="numeric" min="12" max="99" required />
+                </label>
+                <label class="field">
+                  <span>Téléphone</span>
+                  <input name="telephone" type="tel" required autocomplete="tel" inputmode="tel" />
+                </label>
+              </div>
+              <fieldset class="interests">
+                <legend>Qu’est-ce qui t’intéresse à l’AJEP&nbsp;?</legend>
+                <label class="choice"
+                  ><input type="checkbox" name="interet" value="Espace étudiants" /> Espace étudiants</label
+                >
+                <label class="choice"><input type="checkbox" name="interet" value="Cours" /> Cours</label>
+                <label class="choice"
+                  ><input type="checkbox" name="interet" value="Fêtes & événements" /> Fêtes &amp; événements</label
+                >
+                <label class="choice"><input type="checkbox" name="interet" value="Rencontres" /> Rencontres</label>
+                <label class="choice"
+                  ><input type="checkbox" name="interet" value="Université d’été" /> Université d’été</label
+                >
+                <label class="choice"><input type="checkbox" name="interet" value="Autre" /> Autre</label>
+              </fieldset>
+              <label class="field">
+                <span>Parle-nous de toi et de ce que tu recherches</span>
+                <textarea
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="Quelques mots sur toi, ce qui t’intéresse et ce que tu aimerais trouver à l’AJEP…"
+                ></textarea>
+              </label>
+              <p class="form-status" id="form-status" hidden></p>
+              <button class="btn btn-gold btn-full" type="submit">Envoyer ma demande</button>
+            </form>
           </div>
         </div>
       </section>
@@ -471,15 +363,15 @@
           Puteaux — Hauts-de-Seine
         </div>
         <div class="foot-links">
-          <a href="#rejoindre">Contact</a>
-          <a class="js-whatsapp" href="#rejoindre">WhatsApp</a>
+          <a class="js-join" href="#rejoindre">Contact</a>
+          <a class="js-join" href="#rejoindre">WhatsApp</a>
           <a class="js-instagram" href="#" hidden>Instagram</a>
           <a href="mentions-legales.html">Mentions légales</a>
         </div>
       </div>
     </footer>
 
-    <a class="fab-wa js-whatsapp" href="#rejoindre" aria-label="Écrire sur WhatsApp">
+    <a class="fab-wa js-join" href="#rejoindre" aria-label="Rejoindre l’AJEP">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path
           d="M19.05 4.91A9.86 9.86 0 0 0 12.04 2C6.5 2 2 6.48 2 12c0 1.77.46 3.45 1.28 4.9L2 22l5.25-1.38A9.93 9.93 0 0 0 12.04 22C17.56 22 22 17.52 22 12c0-2.65-1.03-5.14-2.95-7.09ZM12.04 20.15a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.12.82.83-3.04-.2-.31a8.1 8.1 0 0 1-1.24-4.31c0-4.48 3.66-8.13 8.16-8.13 2.18 0 4.23.85 5.77 2.39a8.08 8.08 0 0 1 2.39 5.76c0 4.48-3.66 8.13-8.16 8.13Zm4.47-6.09c-.24-.12-1.45-.72-1.67-.8-.22-.08-.39-.12-.55.12-.16.24-.63.8-.77.96-.14.16-.28.18-.52.06-.24-.12-1.02-.37-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.01-.37.11-.49.11-.11.24-.28.37-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.57.18 1.1.16 1.51.1.46-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"
@@ -490,26 +382,6 @@
     <div class="mobile-bar">
       <a class="btn btn-ghost" href="#activites">Activités</a>
       <a class="btn btn-primary js-join" href="#rejoindre">Rejoindre</a>
-    </div>
-
-    <div class="modal" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-title">
-      <div class="modal-backdrop" data-close></div>
-      <div class="modal-card">
-        <button class="modal-close" type="button" data-close aria-label="Fermer">×</button>
-        <h2 id="contact-title">Nous contacter</h2>
-        <p class="lead">Dis-nous qui tu es et ce que tu cherches — on te répond.</p>
-        <form id="contact-form">
-          <label class="field"
-            ><span>Prénom</span><input name="prenom" type="text" required autocomplete="given-name"
-          /></label>
-          <label class="field"><span>E-mail</span><input name="email" type="email" required autocomplete="email" /></label>
-          <label class="field"
-            ><span>Message</span><textarea name="message" rows="4" required></textarea
-          ></label>
-          <p class="form-status" id="form-status" hidden></p>
-          <button class="btn btn-primary btn-full" type="submit">Envoyer</button>
-        </form>
-      </div>
     </div>
 
     <script src="js/config.js"></script>

@@ -2,49 +2,35 @@
   const cfg = window.AJEP_CONFIG || {};
   const header = document.querySelector(".site-header");
   const burger = document.querySelector(".burger");
-  const modal = document.getElementById("contact-modal");
+  const joinCard = document.getElementById("join-card");
   const form = document.getElementById("contact-form");
+  const success = document.getElementById("form-success");
   const status = document.getElementById("form-status");
 
-  function whatsappUrl() {
-    const n = String(cfg.whatsapp || "").replace(/\D/g, "");
-    if (!n) return "";
-    return (
-      "https://wa.me/" +
-      n +
-      "?text=" +
-      encodeURIComponent("Bonjour, je souhaite rejoindre l’AJEP.")
-    );
-  }
-
-  function goWhatsApp(e) {
-    const url = whatsappUrl();
-    if (url) {
-      window.open(url, "_blank", "noopener");
-      return;
-    }
+  function openJoinForm(e) {
     if (e) e.preventDefault();
-    openModal();
-    if (status) {
-      status.hidden = false;
-      status.textContent =
-        "Le lien WhatsApp n’est pas encore renseigné. Laisse-nous un message ici, ou ajoute le numéro dans js/config.js.";
-    }
+    document.body.classList.remove("nav-open");
+    burger.setAttribute("aria-expanded", "false");
+    burger.setAttribute("aria-label", "Ouvrir le menu");
+    joinCard.classList.add("is-open");
+    joinCard.classList.remove("is-success");
+    document.body.classList.add("form-open");
+    form.hidden = false;
+    success.hidden = true;
+    document.getElementById("rejoindre").scrollIntoView({ behavior: "smooth", block: "start" });
+    window.setTimeout(() => {
+      const first = form.querySelector("input, textarea");
+      if (first) first.focus({ preventScroll: true });
+    }, 450);
   }
-
-  document.querySelectorAll(".js-whatsapp").forEach((el) => {
-    el.addEventListener("click", goWhatsApp);
-  });
 
   document.querySelectorAll(".js-join").forEach((el) => {
-    el.addEventListener("click", (e) => {
-      const url = whatsappUrl();
-      if (url) {
-        e.preventDefault();
-        window.open(url, "_blank", "noopener");
-      }
-    });
+    el.addEventListener("click", openJoinForm);
   });
+
+  if (location.hash === "#rejoindre") {
+    window.setTimeout(() => openJoinForm(), 200);
+  }
 
   const ig = document.querySelector(".js-instagram");
   if (ig && cfg.instagram) {
@@ -73,41 +59,46 @@
     }
   });
 
-  function openModal() {
-    modal.classList.add("is-open");
-    document.body.classList.add("modal-open");
-    document.body.style.overflow = "hidden";
-    const input = modal.querySelector("input");
-    if (input) input.focus();
+  function showSuccess() {
+    joinCard.classList.add("is-success");
+    joinCard.classList.remove("is-open");
+    document.body.classList.remove("form-open");
+    form.hidden = true;
+    success.hidden = false;
   }
-  function closeModal() {
-    modal.classList.remove("is-open");
-    document.body.classList.remove("modal-open");
-    document.body.style.overflow = "";
-  }
-
-  document.querySelectorAll(".js-contact").forEach((el) => {
-    el.addEventListener("click", openModal);
-  });
-  modal.querySelectorAll("[data-close]").forEach((el) => {
-    el.addEventListener("click", closeModal);
-  });
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeModal();
-  });
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const data = new FormData(form);
-    const prenom = data.get("prenom");
-    const email = data.get("email");
-    const message = data.get("message");
+    const nom = String(data.get("nom") || "").trim();
+    const age = String(data.get("age") || "").trim();
+    const tel = String(data.get("telephone") || "").trim();
+    const message = String(data.get("message") || "").trim();
+    const interets = data.getAll("interet");
     const to = cfg.email || "contact@ajep.fr";
-    const subject = encodeURIComponent("Contact AJEP — " + prenom);
-    const body = encodeURIComponent("Prénom : " + prenom + "\nE-mail : " + email + "\n\n" + message);
-    window.location.href = "mailto:" + to + "?subject=" + subject + "&body=" + body;
-    status.hidden = false;
-    status.textContent = "Ouverture de ta messagerie…";
+    const btn = form.querySelector('button[type="submit"]');
+    if (btn) btn.disabled = true;
+
+    const payload = {
+      nom: nom,
+      age: age,
+      telephone: tel,
+      interets: interets.length ? interets.join(", ") : "non précisé",
+      message: message,
+      _subject: "AJEP — demande de contact — " + nom,
+    };
+
+    fetch("https://formsubmit.co/ajax/" + encodeURIComponent(to), {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(payload),
+    })
+      .catch(() => null)
+      .finally(() => {
+        showSuccess();
+        if (btn) btn.disabled = false;
+        if (status) status.hidden = true;
+      });
   });
 
   const io = new IntersectionObserver(
