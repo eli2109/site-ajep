@@ -1,0 +1,7 @@
+# o2switch — forcer HTTPS et le domaine canonique
+RewriteEngine On
+
+# http://… et www. → https://ajep-puteaux.fr
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.ajep-puteaux\.fr$ [NC]
+RewriteRule ^ https://ajep-puteaux.fr%{REQUEST_URI} [L,R=301]
