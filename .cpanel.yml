@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/sc2alefmedia/public_html
+    - /usr/bin/rsync -av --exclude='.git' --exclude='.cpanel.yml' --exclude='image 2' --exclude='.DS_Store' ./ $DEPLOYPATH
