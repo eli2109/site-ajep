@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/sc2alefmedia/public_html
+    - export DEPLOYPATH=/home/sc2alefmedia/ajep-puteaux.fr
     - /usr/bin/rsync -av --exclude='.git' --exclude='.cpanel.yml' --exclude='image 2' --exclude='.DS_Store' ./ $DEPLOYPATH
