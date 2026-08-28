@@ -147,24 +147,8 @@ ul {
   min-width: 0;
 }
 .brand img {
-  height: 42px;
+  height: 48px;
   width: auto;
-}
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-.brand-text strong {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  letter-spacing: -0.04em;
-}
-.brand-text span {
-  font-size: 0.68rem;
-  color: var(--ink-soft);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 
 .nav {
@@ -994,7 +978,7 @@ section[id] {
     padding-bottom: 2.8rem;
   }
   .brand img {
-    height: 48px;
+    height: 54px;
   }
 
   .hero-bg {
